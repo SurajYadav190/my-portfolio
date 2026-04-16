@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+
     "start": "npm run serve & npm run tailwindcss",
     "serve": "ng serve",
     "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./src/styles.css --watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+     "deploy": "ng build --base-href=/my-portfolio/ && npx gh-pages -d dist/personal-website"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +39,7 @@
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
     "@types/three": "^0.146.0",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
