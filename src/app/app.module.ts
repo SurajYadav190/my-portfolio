@@ -17,9 +17,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MobileNavbarComponent } from './mobile-navbar/mobile-navbar.component';
 import { DarkModeToggleButtonModule } from './dark-mode-toggle-button/dark-mode-toggle-button.module';
 import { AboutModule } from './about/about.module';
+import { AiChatComponent } from './ai-chat/ai-chat.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, MobileNavbarComponent],
+  declarations: [AppComponent, NavbarComponent, MobileNavbarComponent,AiChatComponent],
   imports: [
     BrowserModule,
     RouterModule,
@@ -35,6 +37,7 @@ import { AboutModule } from './about/about.module';
     ContactModule,
     DarkModeToggleButtonModule,
     AboutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

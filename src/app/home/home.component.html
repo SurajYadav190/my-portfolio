@@ -1,4 +1,4 @@
-<div mt-40 class="mt-40 phone:text-center">
+
   <div
     class="flex phone:justify-around phone:flex-col-reverse tablet:flex-row phone:items-center"
   >
@@ -37,4 +37,45 @@
       ></app-earth>
     </div>
   </div>
+  <!-- FLOATING BUTTON -->
+<div class="fixed bottom-6 right-6 z-50">
+  <span class="pulse-ring"></span>
+
+  <button
+    (click)="toggleChat()"
+    class="bg-mainPurple text-white p-4 rounded-full shadow-lg hover:scale-110 transition"
+  >
+    🤖
+  </button>
+</div>
+
+<!-- POPUP CHAT -->
+<div *ngIf="isChatOpen" class="fixed bottom-20 right-6 w-80 bg-black dark:bg-gray-800 shadow-xl rounded-xl p-4">
+
+  <div class="flex justify-between items-center mb-3">
+    <h3 class="font-bold">Ask Suraj 🤖</h3>
+    <button (click)="toggleChat()">❌</button>
+  </div>
+
+  <input
+    type="text"
+
+    (keyup.enter)="askAI()"
+    placeholder="Ask something..."
+    class="w-full p-2 border rounded mb-3 dark:bg-black-700 dark:text-black"
+  />
+
+  <button
+    (click)="askAI()"
+    class="w-full bg-mainPurple text-black py-2 rounded"
+  >
+    Ask
+  </button>
+
+  <div *ngIf="aiResponse" class="mt-3 p-2 bg-black-900 dark:bg-black-700 rounded">
+    {{ aiResponse }}
+  </div>
+
+
+
 </div>
