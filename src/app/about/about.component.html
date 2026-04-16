@@ -1,4 +1,13 @@
 <h1 class="text-h1 font-extrabold mb-8">Experiences</h1>
+<div class="flex justify-center mt-6">
+  <a
+    href="assets/resume/cv1.pdf"
+    download="Suraj_Yadav_Resume.pdf"
+    class="bg-mainPurple text-white px-4 py-2 rounded-md text-sm hover:bg-purple-700 transition"
+  >
+    📄 Download Resume
+  </a>
+</div>
 <div class="flex justify-center items-center flex-col">
   <div
     *ngFor="let experience of experiences"
@@ -17,6 +26,7 @@
       <p class="mb-4 text-gray-500 dark:text-gray-300 text-xxs">
         {{ experience.description }}
       </p>
+
       <div class="flex flex-wrap mt-2 text-xxxxs">
         <div
           *ngFor="let language of experience.languages"
@@ -64,13 +74,7 @@
           </span>
         </div>
 
-        <a
-  href="assets/resume/cv1.pdf"
-  download="Suraj_Yadav_Resume.pdf"
-  class="inline-block mt-4 bg-mainPurple text-white px-4 py-2 rounded-md text-sm hover:bg-purple-700 transition"
->
-  📄 Download Resume
-</a>
+
       </div>
     </div>
   </div>
