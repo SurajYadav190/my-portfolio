@@ -145,7 +145,7 @@ export class WorkComponent implements OnInit {
     const angular = new Language(
       4,
       Languages.SPRINGBOOT,
-      'https://img.icons8.com/?size=100&id=l9a5tcSnBwcf&format=png&color=000000',
+      'https://img.icons8.com/?size=100&id=90519&format=png&color=000000',
       'I use it in my work-study projects, and in my personal projects.',
       LanguagesLevel.Advanced
     );
